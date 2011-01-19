@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}TV{% endblock %}
+
+{% block body %}
+<div id="timeout" style="display: none">
+	<h2>Times up! ☹</h2>
+</div>
+<div id="header">
+	<img src="/static/img/barcamp_logo_tv.png" />
+</div>
+<div id="container">
+	<div id="presentations">
+		<ul id="presentation_list">
+			
+		</ul>
+	</div>
+	<div id="sidebar">
+		<div id="sidebar_top">
+			<h2>#barcampsj</h2>
+		</div>
+		<div id="sidebar_content">
+			<div id="search_feed"></div>
+			<ul id="stats">
+				<li>
+					<span class="stat">Attendance</span>
+					<span class="attendance stat_value">999</span>
+				</li>
+				<li>
+					<span class="stat">Presentations</span>
+					<span class="presentation stat_value">999</span>
+				</li>
+				<li>
+					<span class="stat">Tweets</span>
+					<span class="tweets stat_value">A Lot</span>
+				</li>
+				<li>
+					<span class="stat">Time</span>
+					<span class="time stat_value">10:59</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+{% endblock %}
+
+{% block scripts %}
+	<script src="/static/js/jquery.tweet.js" type="text/javascript"></script>
+	<script src="/static/js/jquery.countdown.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//Initialize functions
+		clock();
+		attendance();		
+		presentations();
+    	tweets();
+		presentation_counts();
+		
+		$("#search_feed").tweet({
+			query: "#barcampsj",
+			avatar_size: 48,
+			count: 3,
+			loading_text: "searching twitter...",
+			refresh_interval: 5
+		});
+	</script>
+{% endblock %}

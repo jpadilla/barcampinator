@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+
+{% block body %}
+{% if thanks %}
+<script type="text/javascript" charset="utf-8">
+  var thanks = true;
+</script>
+{% else %}
+<script type="text/javascript" charset="utf-8">
+  var thanks = false;
+</script>
+{% endif %}
+<div id="error_pane"><span class="error_face">☹</span> Ups! All fields are required</div>
+<div class="container">
+  <div id="logo">
+    <img src="/static/img/barcamp_logo_register.png" alt="Barcamp">
+  </div>
+  <div class="push-6 span-13" id="register_form">
+    <div id="form_content">
+      <form action="" method="post" accept-charset="utf-8" autocomplete="off">
+        <p>
+          <label>Name</label>
+          <input type="text" name="name" value="" id="name" />
+        </p>
+        <p>
+          <label>Email</label>
+          <input type="text" name="email" value="" id="email" />
+        </p>
+        <p>
+          <label>Twitter Username</label>
+          <input type="text" name="twitter_username" value="" id="twitter_username" />
+        </p>
+        <p>
+          <p><label>Are you presenting tonight?</label></p>
+          <label id="yes_label" for="yes">Yes</label><input type="radio" id="yes" name="presentation" value="yes">
+          <label id="no_label" for="no">No</label><input type="radio" id="no" name="presentation" value="no">
+        </p>
+        <div id="horizontal_clear"><br /><br /></div>
+        <div id="optional_form_items">
+          <p>
+            <label>Presentation Title</label>
+            <input type="text" name="presentation_title" value="" id="presentation_title" />
+          </p>
+          <p>
+            <label>Presentation Category</label>
+            <select name="category">
+              <option value=""> </option>
+              {% for category in categories %}
+              <option value="{{category.id}}">{{category.name}}</option>
+              {% endfor %}
+            </select>
+          </p>
+        </div>
+        <button type="submit" id="register_button">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+{% endblock %}

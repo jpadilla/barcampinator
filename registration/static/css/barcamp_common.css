@@ -1,0 +1,359 @@
+body {
+  font: 100% "Helvetica Neue";
+  background-color: #575757;
+}
+
+#container {
+  
+}
+
+#register_form {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFEFEF), color-stop(100%,#C0C0C0)); /* webkit */
+  -webkit-border-radius:6px;
+  border: 1px solid #A9A9A9;
+  -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+}
+
+#logo {
+  margin:50px 0px;
+  text-align: center;
+}
+
+#form_content {
+  padding:30px;
+}
+
+#form_content input {
+  padding:6px;
+  font-size: 150%;
+  -webkit-border-radius:6px;
+  width:435px;
+  text-align: center;
+  border: 1px solid #A4A4A1;
+  color:#525252;
+  font-family: "HelveticaNeue-UltraLight";
+}
+
+#form_content select {
+  padding:6px;
+  font-size: 150%;
+  -webkit-border-radius:6px;
+  width:450px;
+  border: 1px solid #A4A4A1;
+  color:#525252;
+  font-family: "HelveticaNeue-UltraLight";
+}
+
+#form_content #yes_label {
+  display:block;
+  text-indent: -1000px;
+  cursor:pointer;
+  width:71px;
+  height:46px;
+  background: transparent url('/static/img/yes_no_toggle_button.png') no-repeat;
+  float:left;
+}
+
+#form_content #yes_label.selected {
+  background-position: 0px -54px;
+}
+
+#form_content #no_label {
+  display:block;
+  text-indent: -1000px;
+  cursor:pointer;
+  width:71px;
+  height:46px;
+  background: transparent url('/static/img/yes_no_toggle_button.png') no-repeat;
+  background-position: -71px 0px;
+  float:left;
+}
+
+#form_content #no_label.selected {
+  background-position: -71px -54px;
+}
+
+#form_content #yes, #form_content #no {
+  display:none;
+}
+
+#form_content input:focus {
+  -webkit-box-shadow: 0px 0px 20px rgba(162,235,125,1);
+  background:#F1F8E6;
+}
+
+#form_content input.error {
+  -webkit-box-shadow: 0px 0px 20px rgba(185,41,0,1);
+  background:#FBEEEE;
+  color:red;
+  border: 1px solid red;
+}
+
+#form_content label {
+  font-family: "HelveticaNeue-Light";
+  color:#404040;
+  font-weight: normal;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+}
+
+#form_content button {
+  width:110px;
+  height:46px;
+  border:0px;
+  text-indent:-10000px;
+  overflow:hidden;
+  cursor:pointer;
+  background: transparent url('/static/img/register_button.png') no-repeat;
+}
+
+#form_content button:active {
+  background-position: 0px -50px;
+}
+
+#horizontal_clear {
+/*  display:none;*/
+}
+
+#error_pane {
+  display:none;
+  position:fixed;
+  width:100%;
+  padding-top:50px;
+  height:140px;
+  bottom:0px;
+  text-align: center;
+  z-index:2000;
+  background-color: rgba(0,0,0,0.8);
+  color:#FFF;
+  font-family: "HelveticaNeue-UltraLight";
+  font-size: 200%;
+  -webkit-box-shadow:0px 0px 20px #000;
+}
+
+.error_face {
+  font-size: 200%;
+  color:red;
+}
+
+#header {
+  height: 55px;
+  width: 100%;
+  padding: 5px 0 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFEFEF), color-stop(100%,#C0C0C0)); /* webkit */
+  text-align: center;
+}
+
+#container {
+  width: 1024px;
+  margin-top: 10px;
+}
+
+#presentations {
+  width: 63%;
+  float: left;
+}
+
+ul {
+  list-style: none;
+}
+
+#presentations li {
+   position: relative;
+   padding: 20px 20px 40px 20px;
+   border-bottom: 1px dashed #7C7C7C !important;
+   
+  
+}
+
+#presentations li .thumbnail {
+  float: left;
+  margin: 0 5px 0 0;
+  width: 48px;
+  height: 48px;
+}
+
+#presentations li .title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+}
+
+#presentations li .author {
+  display: block;
+  float: left;
+  color: #FFF;
+  font-size: 12px;
+}
+
+#presentations li .twitter_username {
+  display: block;
+  float: left;
+  color: #7E7E7E;
+  margin: 0 0 0 10px;
+  font-size: 12px;
+}
+
+#presentations li .countdown {
+  position: absolute;
+  right: 15px;
+  top: 20%;
+  font-size: 48px;
+  color: #BED7A2;
+  display: block;
+}
+
+#presentations li.ongoing, #presentations li.cued  {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7CB85F), color-stop(100%,#4B7F03)); /* webkit */
+  -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+  padding: 25px 20px 35px;
+  -webkit-border-radius:8px;
+  border: none !important;
+}
+
+#presentations li.ongoing .content, #presentations li.cued .content {
+  width: 392px;
+  display: block;
+  margin-left: 56px;
+  min-height: 48px;
+}
+
+#presentations li.ongoing .title, #presentations li.cued .title {
+  font-size: 21px;
+}
+
+#presentations li.ongoing .author, #presentations li.cued .author {
+  font-size: 14px;
+}
+
+#presentations li.ongoing .twitter_username, #presentations li.cued .twitter_username {
+  font-size: 14px;
+  color: #B9D29A;
+}
+
+#presentations li.cued {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5E5E5E), color-stop(100%,#303030)); /* webkit */
+}
+
+#presentations li.cued .countdown {
+  color: #B1B1B1;
+}
+
+#presentations li.cued .twitter_username {
+  color: #A9A9A9;
+}
+
+#presentations li:last-child  {
+  border: none;
+}
+
+
+#sidebar {
+  width: 35%;
+  float: left;
+  -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+}
+
+#sidebar_top {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5C97F7), color-stop(100%,#426BB0)); /* webkit */
+  -webkit-border-radius:8px 8px 0 0;
+  padding: 15px 0 15px 0;
+  text-align: center;
+}
+
+#sidebar_top h2 {
+  color: #FFF;
+  margin: 0;
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+}
+
+#sidebar_content {
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFEFEF), color-stop(100%,#C0C0C0)); /* webkit */
+   padding: 15px;
+   float: left;
+   -webkit-border-radius: 0 0 8px 8px;
+}
+#tweets {
+  padding: 0;
+  margin: 0;
+}
+
+#tweets li {
+  border-bottom: 1px dashed #7C7C7C;
+  padding: 10px;
+  font-size: 12px;
+}
+#tweets li .thumbnail {
+  float: left;
+  margin: 0 5px 0 0;
+  width: 48px;
+  height: 48px;
+}
+
+#tweets li .content {
+  display: block;
+  margin-left: 56px;
+  min-height: 48px;
+}
+
+#tweets li .author {
+  color: #3368AF;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+#tweets li .tweet_content {
+  min-height: 48px;
+  width: 300px;
+  color: #5C5C5C;
+  
+}
+
+#tweets li:last-child  {
+  border: none;
+}
+
+#stats {
+  border-top: 1px solid #7C7C7C;
+  padding: 20px 0 0 0;
+  margin: 0;
+}
+
+#stats li {
+  height: 100px;
+  width: 152px;
+  display: block;
+  float: left;
+}
+#stats li .stat {
+  display: block;
+  font-size: 24px;
+  color: #448BED;
+}
+#stats li .stat_value {
+  display: block;
+  font-size: 36px;
+  color: #525252;
+}
+
+#timeout {
+  background: #f0b2b1;
+  overflow:hidden;
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  z-index:10000;
+  border: 30px solid #ba2a00;
+}
+
+#timeout h2 {
+  margin: 25% auto 0;
+  text-align: center;
+  font-family: "HelveticaNeue-UltraLight";
+  font-weight: bold;
+  font-size: 50px;
+  color: #ba2a00;
+}
