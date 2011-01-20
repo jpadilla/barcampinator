@@ -48,3 +48,9 @@ Registration administration
 *   Name.
 *	Email.
 *	Twitter username.
+
+
+Developers
+---------------------
+*   José Padilla - http://twitter.com/jpadilla_
+*	Giovanni Collazo - http://twitter.com/gcollazo
