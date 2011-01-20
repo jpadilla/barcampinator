@@ -52,5 +52,5 @@ Registration administration
 
 Developers
 ---------------------
-*   José Padilla - http://twitter.com/jpadilla_
-*	Giovanni Collazo - http://twitter.com/gcollazo
+*   José Padilla - [http://twitter.com/jpadilla_](http://twitter.com/jpadilla_)
+*	Giovanni Collazo - [http://twitter.com/gcollazo](http://twitter.com/gcollazo)
